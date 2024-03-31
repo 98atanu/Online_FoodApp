@@ -4,24 +4,21 @@ import { useDispatch } from 'react-redux';
 import { addToCart } from './redux_toolkit/slices/CartSlice';
 
 
-const FoodCard = ({item}) => {
+const FoodCard = ({id,name,img,price,rating,desc,}) => {
 
   const dispatch = useDispatch();
 
-  const handleAdd = (item) =>{
-    dispatch(addToCart(item));
-  }
   return (
     <div className='font-bold w-[250px] bg-white p-5 flex flex-col rounded-lg gap-2'>
-        <img src={item.img} alt="" className='w-auto h-[130px] hover:scale-110 transition-all duration-500 ease-in-out '/>
+        <img src={img} alt="" className='w-auto h-[130px] hover:scale-110 transition-all duration-500 ease-in-out '/>
         <div className='text-sm flex justify-between'>
-            <h3>{item.name}</h3>
-            <span className='text-green-500'>₹ {item.price}</span>
+            <h3>{name}</h3>
+            <span className='text-green-500'>₹ {price}</span>
         </div>
-        <p className='text-sm font-normal'>{item.desc.slice(0,50)}...</p>
+        <p className='text-sm font-normal'>{desc.slice(0,50)}...</p>
         <div className='flex justify-between'>
-            <span className='flex justify-center items-center '><FaStar className='text-yellow-400 mr-1'/> {item.rating}</span>
-            <button onClick={()=> handleAdd(item)} className='p-1 text-white bg-green-500 hover:bg-green-600 rounded-lg text-sm'>Add To Cart</button>
+            <span className='flex justify-center items-center '><FaStar className='text-yellow-400 mr-1'/> {rating}</span>
+            <button onClick={()=> dispatch(addToCart({id, name, price, rating, img, qty:1}))} className='p-1 text-white bg-green-500 hover:bg-green-600 rounded-lg text-sm'>Add To Cart</button>
         </div>
     </div>
   )

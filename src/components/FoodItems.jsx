@@ -8,7 +8,13 @@ const FoodItems = () => {
         {FoodData.map((item,index)=>(
             <FoodCard 
             key={index}
-            item={item}
+            id={item.id}
+            name={item.name}
+            price={item.price}
+            img={item.img}
+            rating={item.rating}
+            desc={item.desc}
+            qty={item.qty}
             />
         ))
         }
