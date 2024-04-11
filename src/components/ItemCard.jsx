@@ -10,7 +10,7 @@ const ItemCard = ({id,name,price,img,qty}) => {
 
 
   return (
-    <div className="flex gap-2 shadow-lg rounded-lg p-2 mb-3">
+    <div className="flex gap-2 shadow-lg rounded-lg p-2 mb-3 ">
       <MdDelete onClick={()=>{
          dispatch(removeFromCart({id}));
          toast(`${name} Removed!`, {

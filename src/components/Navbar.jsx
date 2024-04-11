@@ -6,10 +6,10 @@ const Navbar = () => {
 
   const dispatch = useDispatch();
   return (
-    <nav className='flex flex-col lg:flex-row justify-between py-3 mx-6 mb-10'>
+    <nav className='flex flex-col lg:flex-row justify-between py-3 mx-6 mb-8'>
         <div className='flex flex-col items-center'>
-            <h3 className='text-xl font-bold text-gray-200'>{new Date().toUTCString().slice(0,16)}</h3>
-            <h1 className='text-2xl font-bold  px-8 text-gray-200 bg-gradient-to-l from-green-900 to-green-700 rounded-lg '>Foodizz</h1>
+            <h3 className='text-xl font-bold text-gray-200 mb-2'>{new Date().toUTCString().slice(0,16)}</h3>
+            <h1 className='text-2xl font-bold  px-8 text-gray-200 bg-gradient-to-l from-green-900 to-green-700 rounded-lg mb-2'>Foodizz</h1>
         </div>
         <div>
             <input 

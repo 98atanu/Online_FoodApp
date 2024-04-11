@@ -36,7 +36,7 @@ const Cart = () => {
         <div className='absolute bottom-0'>
             <h3 className='font-semibold text-gray-800'>Items : {totalItems}</h3>
             <h3 className='font-semibold text-gray-800'>Total Amount : {totalPrice}</h3>
-            <hr className='w-[90vw] lg:w-[18vw] my-2'/>
+            <hr className='w-[90vw] lg:w-[18vw] my-2 opacity-0'/>
             <button
             onClick={()=> navigate("/success")}
              className='bg-green-700 text-white px-3 py-2 rounded-lg w-[90vw] lg:w-[18vw] mb-5'>Check Out</button>
