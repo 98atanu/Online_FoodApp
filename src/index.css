@@ -4,10 +4,10 @@
 @tailwind components;
 @tailwind utilities;
 
-* {
+* { 
   font-family: 'Poppins', sans-serif;;
 }
 
 body {
-  background: #e8dadd;
+  background: linear-gradient(to top , #192a6c, #090909);
 }

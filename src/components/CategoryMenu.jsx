@@ -22,17 +22,17 @@ const CategoryMenu = () => {
   
   return (
     <div className='mx-6'>
-        <h3 className='text-xl font-semibold'>Find the best food</h3>
+        <h3 className='text-xl font-semibold text-white'>Find the best food</h3>
         <div className='my-5 flex gap-3 overflow-x-scroll scroll-smooth md:overflow-x-hidden'>
         <button 
                 onClick={()=> dispatch(setCategory("All"))}
-                className={`px-3 py-2 bg-gray-200 font-bold rounded-lg hover:bg-green-500 hover:text-white ${selectedCategory === "All" && "bg-green-500 text-white"}`}>All</button>
+                className={`px-3 py-2 bg-gray-200 font-bold rounded-lg hover:bg-green-700 hover:text-white ${selectedCategory === "All" && "bg-green-700 text-white"}`}>All</button>
             {categories.map((category,index)=>{
               return (                
                 <button 
                 onClick={()=> dispatch(setCategory(category))}
                 key={index} 
-                className={`px-3 py-2 bg-gray-200 font-bold rounded-lg hover:bg-green-500 hover:text-white ${selectedCategory === category && "bg-green-500 text-white"}`}>{category}</button>
+                className={`px-3 py-2 bg-gray-200 font-bold rounded-lg hover:bg-green-700 hover:text-white ${selectedCategory === category && "bg-green-700 text-white"}`}>{category}</button>
               )
             })}
         </div>
